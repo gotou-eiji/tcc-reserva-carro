@@ -29,7 +29,7 @@ if (isset($_POST["acessar"]))
                 $_SESSION["usuario_logado"] = $usuario["nome_usuario"];                
             }
 
-            header("Location: dashboard.php");
+            header("Location: index.php");
         }
         else 
         {
