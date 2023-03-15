@@ -5,9 +5,9 @@ require_once("conexao.php");
 if (isset($_POST["acessar"]))
 {
     $login = $_POST["login"];
-    $password = $_POST["password"];
+    $senha = $_POST["senha"];
 
-    if (($login == "") || ($password == ""))
+    if (($login == "") || ($senha == ""))
     {
         ?>
         <script>
@@ -20,7 +20,7 @@ if (isset($_POST["acessar"]))
     }
     else 
     {
-        $response = verifica_login($login, $password);
+        $response = verifica_login($login, $senha);
 
         if ($response["response"])
         {
@@ -29,7 +29,7 @@ if (isset($_POST["acessar"]))
                 $_SESSION["usuario_logado"] = $usuario["nome_usuario"];                
             }
 
-            header("Location: index.php");
+            header("Location: ./home/home.php");
         }
         else 
         {
@@ -43,11 +43,11 @@ if (isset($_POST["acessar"]))
     }
 }
 
-function verifica_login($login, $password)
+function verifica_login($login, $senha)
 {
-    $password = hash("sha256", $password);
+    $senha = hash("sha256", $senha);
 
-    $sql = "SELECT * FROM funcionario WHERE cpf = '{$login}' AND senha = '{$password}'";
+    $sql = "SELECT * FROM login WHERE login = '{$login}' AND senha = '{$senha}'";
     
     $result = mysqli_query($_SESSION["conexao"], $sql);
    
