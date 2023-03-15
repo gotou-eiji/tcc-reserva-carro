@@ -24,9 +24,9 @@ if (isset($_POST["acessar"]))
 
         if ($response["response"])
         {
-            while ($usuario = mysqli_fetch_assoc($response["result"]))
+            while ($login = mysqli_fetch_assoc($response["result"]))
             {
-                $_SESSION["usuario_logado"] = $usuario["nome_usuario"];                
+                $_SESSION["login_logado"] = $login["nome_login"];                
             }
 
             header("Location: ./home/home.php");
