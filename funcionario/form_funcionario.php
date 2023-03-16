@@ -36,16 +36,20 @@ include_once("../includes.php");
                     <div class="mb-3">     
                         <input type="number" name="telefone"  class="form-control" >                   
                     </div>
-                </div>  
+                </div> 
+                <div class="mb-3">                    
+                        <label class="form-label">Email</label>
+                    </div>  
+                    <div class="mb-3">     
+                        <input type="email" name="email"  class="form-control" >                   
+                    </div>
+                </div>   
                 <button type="submit" name="salvarfuncionario" class="btn btn-primary">Salvar</button>
                 
                 <?php 
                 ?>
 
          
-
-
-
 
             </form>
         </div>
