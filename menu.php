@@ -6,7 +6,7 @@ $url = $_SERVER['REQUEST_URI'];
 
 $explode_url = explode("/", $url);
 
-$segmento = 3;
+$segmento = 2;
 
 if ($explode_url[$segmento] != "funcionario")
 {    
