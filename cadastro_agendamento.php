@@ -15,7 +15,7 @@ if (isset($_POST["salvarAgendamento"]))
  
 
 
-        if if (($cidade == "") || ($bairro == "") || ($data_entrada == "")|| ($data_saida== "") || ($horario_entrada == "") || ($horario_saida== "") || ($motivo == "") || ($intervalo== ""))
+        if (($cidade == "") || ($bairro == "") || ($data_entrada == "")|| ($data_saida== "") || ($horario_entrada == "") || ($horario_saida== "") || ($motivo == "") || ($intervalo== ""))
         {
             ?>
             <script>
@@ -28,7 +28,7 @@ if (isset($_POST["salvarAgendamento"]))
         else 
         {
 
-            $sql = "INSERT INTO FUNCIONARIO (nome, cpf, funcao, telefone) VALUES ('{$nome}', '{$cpf}', '{$funcao}', '{$telefone}')";
+            $sql = "INSERT INTO agendamento (data_entrada, data_saida, horario_entrada, horario_saida, motivo, intervalo) VALUES ('{$data_entrada}', '{$data_saida}', '{$horario_entrada}', '{$horario_saida}', '{$motivo}', '{$intervalo}')";
 
             $result = mysqli_query($conn, $sql);
 
@@ -37,7 +37,7 @@ if (isset($_POST["salvarAgendamento"]))
             }
             ?>
             <script>
-                window.location.href = "cadastro_funcionario.php";
+                window.location.href = "cadastro_agendamento.php";
                 alert("Funcionario cadastrado com sucesso!");
             </script>
             <?php  

@@ -50,12 +50,6 @@ include_once("includes.php");
                     <div class="mb-1">                    
                         <input type="text" name="motivo"  class="form-control">
                     </div>
-                    <div class="mb-1">                    
-                        <label class="form-label">Motivo da Reserva</label>
-                    </div>
-                    <div class="mb-1">                    
-                        <input type="text" name="motivo"  class="form-control">
-                    </div>
                 </div>
                 
                 <button type="submit" name="salvarAgendamento" class="btn btn-primary">Enviar</button>

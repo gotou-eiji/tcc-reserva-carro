@@ -34,10 +34,6 @@ include_once("logar_funcionario.php");
                 
             </div>
         </div>
-        
-        
-            
-
     </form>
 </body>
 </html>
