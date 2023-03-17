@@ -47,7 +47,7 @@ include_once("../includes.php");
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="../email/form_email.php?ifuncionario='.$result["idfuncionario"].'">
+                                        <a href="../excluir/form_excluir.php?idfuncionario='.$result["idfuncionario"].'">
                                             <button class="btn btn-success">
                                                 Excluir
                                             </button>

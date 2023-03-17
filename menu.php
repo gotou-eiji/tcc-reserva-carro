@@ -36,9 +36,9 @@ else
 }
 
 
-if ($explode_url[$segmento] != "pedido")
+if ($explode_url[$segmento] != "excluir")
 {    
-    $url_pedido = $url_absoluta."pedido/";
+    $url_pedido = $url_absoluta."excluir/";
 }
 else 
 {   
