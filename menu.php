@@ -1,6 +1,6 @@
 <?php 
 
-$url_absoluta = "http://localhost:/reserva_carro/";
+$url_absoluta = "http://localhost:8080/reserva_carro/";
 
 $url = $_SERVER['REQUEST_URI'];
 
@@ -52,7 +52,7 @@ else
 
 </body>    
 <div class="d-grid gap-4 col-100 d-md-flex  justify-content-md ">
-<li><a href="<?php echo $url_absoluta."index.php"; ?>" class="btn btn-primary text-center">Inicio Do Site</a>
+<li><a href="<?php echo $url_absoluta."home/home.php"; ?>" class="btn btn-primary text-center">Inicio Do Site</a>
 
 <li><a href="<?php echo $url_absoluta."home/home.php"; ?>" class="btn btn-primary">Inicio Do Painel</a>
 
@@ -94,7 +94,7 @@ else
         </a>
     </li> 
 
-    <a href="logout.php"
+    <a href="../index.php"
            class="btn btn-danger">Sair</a>
            
           <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>

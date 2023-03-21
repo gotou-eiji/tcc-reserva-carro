@@ -21,7 +21,7 @@ include_once("cabecalho.php");
       </ul>
 
       <div class="col-md-3 text-end">
-      <form action="logar.php" method="POST">
+      <form action="login/logar.php" method="POST">
         <button type="submit" class="btn btn-outline-primary me-2" name="entrar"> Logar</button>
         <button type="button" class="btn btn-primary">Se Cadastrar</button>
       </div>

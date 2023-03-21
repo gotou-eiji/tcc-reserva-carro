@@ -7,16 +7,17 @@ if (isset($_POST["salvarfuncionario"]))
         $nome = $_POST["nome"];
         $cpf = $_POST["cpf"];
         $funcao = $_POST["funcao"];
+        $emprego = $_POST["emprego"];
         $telefone = $_POST["telefone"];
- 
+        $email = $_POST["email"];
 
 
-        if (($nome == "") || ($cpf == "") || ($funcao == "")|| ($telefone== ""))
+        if (($nome == "") || ($cpf == "") || ($funcao == "") || ($emprego) || ($telefone== "") || ($email==""))
         {
             ?>
             <script>
                 window.location.href = "form_funcionario.php";
-                alert("Voce precisa preencher os dados!");
+                alert("Você precisa preencher os dados!");
     
             </script>
             <?php
@@ -24,7 +25,7 @@ if (isset($_POST["salvarfuncionario"]))
         else 
         {
 
-            $sql = "INSERT INTO FUNCIONARIO (nome, cpf, funcao, telefone) VALUES ('{$nome}', '{$cpf}', '{$funcao}', '{$telefone}')";
+            $sql = "INSERT INTO FUNCIONARIO (nome, cpf, funcao, telefone, email) VALUES ('{$nome}', '{$cpf}', '{$funcao}', '{$emprego}', '{$telefone}', '{$email}')";
 
             $result = mysqli_query($conn, $sql);
 
@@ -34,7 +35,7 @@ if (isset($_POST["salvarfuncionario"]))
             ?>
             <script>
                 window.location.href = "cadastro_funcionario.php";
-                alert("Funcionario cadastrado com sucesso!");
+                alert("Funcionário cadastrado com sucesso!");
             </script>
             <?php  
 }
