@@ -29,14 +29,14 @@ if (isset($_POST["acessar"]))
                 $_SESSION["usuario_logado"] = $usuario["nome_usuario"];                
             }
 
-            header("Location: ./home/home.php");
+            header("Location: ../home/home.php");
 
         }
         else 
         {
             ?>
             <script>
-                 window.location.href = "index.php";
+                 window.location.href = "../index.php";
                 alert("Usuário Não Encontrado!");
             </script>
             <?php
