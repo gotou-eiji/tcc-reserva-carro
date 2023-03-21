@@ -1,6 +1,6 @@
 <?php 
 
-$url_absoluta = "http://localhost:/tcc-reserva-carro/";
+$url_absoluta = "http://localhost:8080/tcc-reserva-carro/";
 
 $url = $_SERVER['REQUEST_URI'];
 
@@ -83,13 +83,13 @@ else
   
     <li>
         <a href="<?php  
-            echo $url_agendamento."form_agendamento.php"; ?>"
+            echo $url_agendamento."form_historico.php"; ?>"
             class="btn btn-primary"> Histórico
         </a>
     </li>
     <li>
         <a href="<?php  
-            echo $url_agendamento."lista_agendamento.php"; ?>"
+            echo $url_agendamento."form_agendamento.php"; ?>"
             class="btn btn-primary"> Fazer agendamento
         </a>
     </li> 
