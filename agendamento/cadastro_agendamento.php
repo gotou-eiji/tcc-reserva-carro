@@ -1,5 +1,6 @@
 <?php 
 include_once("../includes.php");
+include_once("combobox.php");
 
 
 if (isset($_POST["salvar_agendamento"]))
@@ -19,7 +20,11 @@ if (isset($_POST["salvar_agendamento"]))
         $data =  $_POST["data"];
         $motivo =  $_POST["motivo"];
 
-            $sql = "INSERT INTO AGENDAMENTO (carro_idcarro,funcionario_idfuncionario,cidade_idcidade,entrada, saida, horario_entrada, horario_saida,data,motivo) VALUES ('{$carro_idcarro}','{$funcionario_idfuncionario}','{$cidade_idcidade}','{$entrada}','{$saida}', '{$horario_entrada}', '{$horario_saida}', '{$data}', '{$motivo}')";
+        //$sql = "INSERT INTO CIDADE (cidade,bairro) VALUES ('{$cidade_idcidade}','{$bairro}')";
+
+        //$result = mysqli_query($conn, $sql);
+
+        $sql = "INSERT INTO AGENDAMENTO (carro_idcarro,funcionario_idfuncionario,cidade_idcidade,entrada, saida, horario_entrada, horario_saida,data,motivo) VALUES ('{$carro_idcarro}','{$funcionario_idfuncionario}','{$cidade_idcidade}','{$entrada}','{$saida}', '{$horario_entrada}', '{$horario_saida}', '{$data}', '{$motivo}')";
 
             $result = mysqli_query($conn, $sql);
 }
@@ -28,9 +33,9 @@ if (isset($_POST["salvar_agendamento"]))
                 $_SESSION["idfuncionario"] = mysqli_insert_id($conn);   
             }
             ?>
-            <script>
-                window.location.href = "form_agendamento.php";
-                alert("Agendamento cadastrado com sucesso!");
+            <script>//
+                //window.location.href = "form_agendamento.php";
+                //alert("Agendamento cadastrado com sucesso!");
             </script>
             <?php  
 

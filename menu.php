@@ -1,6 +1,6 @@
 <?php 
 
-$url_absoluta = "http://localhost:8080/tcc-reserva-carro/";
+$url_absoluta = "http://localhost/tcc-reserva-carro/";
 
 $url = $_SERVER['REQUEST_URI'];
 
