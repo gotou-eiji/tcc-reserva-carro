@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once("conexao.php");
 require_once("verifica_usuario_logado.php");

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once("verifica_sessao.php");
 
@@ -9,11 +9,8 @@ $password = "";
 
 $conn = mysqli_connect($hostname, $user, $password, $database);
 
-if (!$conn) 
-{
-    die(mysqli_error());
-}
-else 
-{    
+if (!$conn) {
+    die(mysqli_error($sql));
+} else {
     $_SESSION["conexao"] = $conn;
 }

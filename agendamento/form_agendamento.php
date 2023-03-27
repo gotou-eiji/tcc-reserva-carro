@@ -24,13 +24,13 @@ include_once("../includes.php");
                         <label class="form-label">Data de Entrada</label>
                     </div>  
                     <div class="mb-1">    
-                        <input type="date" name="dataEntrada" class="form-control">                   
+                        <input type="date" name="entrada" class="form-control">                   
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Data de Saída</label>
                     </div>  
                     <div class="mb-1">    
-                        <input type="date" name="dataSaida" class="form-control">                   
+                        <input type="date" name="saida" class="form-control">                   
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Horário de Entrada</label>
