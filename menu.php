@@ -1,6 +1,6 @@
 <?php 
 
-$url_absoluta = "http://localhost/tcc-reserva-carro/";
+$url_absoluta = "http://localhost:8080/tcc-reserva-carro/";
 
 $url = $_SERVER['REQUEST_URI'];
 
@@ -33,6 +33,24 @@ if ($explode_url[$segmento] != "agendamento")
 else 
 {   
     $url_agendamento = "";    
+}
+
+if ($explode_url[$segmento] != "cidade")
+{    
+    $url_cidade = $url_absoluta."cidade/";
+}
+else 
+{   
+    $url_cidade = "";    
+}
+
+if ($explode_url[$segmento] != "bairro")
+{    
+    $url_bairro = $url_absoluta."bairro/";
+}
+else 
+{   
+    $url_bairro = "";    
 }
 
 
@@ -91,6 +109,18 @@ else
         <a href="<?php  
             echo $url_agendamento."form_agendamento.php"; ?>"
             class="btn btn-primary"> Fazer agendamento
+        </a>
+    </li> 
+      <li>
+        <a href="<?php  
+            echo $url_cidade."form_cidade.php"; ?>"
+            class="btn btn-primary"> Cadastrar cidade
+        </a>
+    </li> 
+    <li>
+        <a href="<?php  
+            echo $url_bairro."form_bairro.php"; ?>"
+            class="btn btn-primary"> Cadastrar Bairro
         </a>
     </li> 
 

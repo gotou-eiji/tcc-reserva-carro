@@ -19,32 +19,22 @@ include_once("../includes.php");
                     <input type="text" name="nome" class="form-control" placeholder="Preencha o Nome">                
                 </div>
                     <div class="mb-3">                    
-                        <label class="form-label">CPF</label>
-                    </div>  
-                    <div class="mb-3">    
+                        <label class="form-label">CPF</label> 
                         <input type="number" name="cpf" class="form-control" placeholder="Preencha o CPF">                   
                     </div>
                     <div class="mb-3">                    
                         <label class="form-label">funcao</label>
-                    </div>  
-                    <div class="mb-3">     
                         <input type="text" name="funcao" class="form-control" placeholder="Preencha a função">                    
                     </div>
                     <div class="mb-3">                    
                         <label class="form-label">Telefone</label>
-                    </div>  
-                    <div class="mb-3">     
                         <input type="number" name="telefone"  class="form-control" >                   
                     </div>
-                </div> 
-                <div class="mb-3">                    
+                    <div class="mb-3">                    
                         <label class="form-label">Email</label>
-                    </div>  
-                    <div class="mb-3">     
                         <input type="email" name="email"  class="form-control" >                   
                     </div>
-                </div>   
-                <button type="submit" name="salvarfuncionario" class="btn btn-primary">Salvar</button>
+                    <button type="submit" name="salvarfuncionario" class="btn btn-primary">Salvar</button>
                 
                 <?php 
                 ?>
