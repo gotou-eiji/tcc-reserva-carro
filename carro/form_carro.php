@@ -19,11 +19,10 @@ include_once("../includes.php");
                             <label class="form-label">Placa</label>
                         </div>
                         <div class="mb-3">
-                            <input type="number" name="placa" class="form-control" placeholder="Preencha a Placa">
+                            <input type="text" size = "7" maxlength = "7" name="placa" class="form-control" placeholder="Preencha a Placa" style='text-transform:uppercase'>
                         </div>
                 </div>
                 <button type="submit" name="salvarcarro" class="btn btn-primary">Salvar</button>
-
                 <?php
                 ?>
                 </form>
