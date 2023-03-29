@@ -17,8 +17,6 @@ include_once("../includes.php");
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Placa</label>
-                        </div>
-                        <div class="mb-3">
                             <input type="text" size = "7" maxlength = "7" name="placa" class="form-control" placeholder="Preencha a Placa" style='text-transform:uppercase'>
                         </div>
                 </div>
