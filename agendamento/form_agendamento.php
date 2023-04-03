@@ -12,42 +12,30 @@ include_once("../includes.php");
             <form action="cadastro_agendamento.php" method="POST">
                 <div class="form-group">
                     <label>Cidade destinada</label>
-                    <input type="text" name="cidade" class="form-control">                
+                    <input type="text" name="cidade" class="form-control" placeholder="Preencha o nome da cidade">                
                 </div>
                     <div class="mb-1">                    
                         <label class="form-label">Bairro</label>
-                    </div>  
-                    <div class="mb-1">    
-                        <input type="text" name="bairro" class="form-control">                   
+                        <input type="text" name="bairro" class="form-control" placeholder="Preencha o endereço do Bairro">                   
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Data de Entrada</label>
-                    </div>  
-                    <div class="mb-1">    
                         <input type="date" name="entrada" class="form-control">                   
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Data de Saída</label>
-                    </div>  
-                    <div class="mb-1">    
                         <input type="date" name="saida" class="form-control">                   
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Horário de Entrada</label>
-                    </div>  
-                    <div class="mb-1">     
                         <input type="time" name="horarioEntrada" class="form-control">                    
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Horário de Saída</label>
-                    </div>  
-                    <div class="mb-1">     
                         <input type="time" name="horarioSaida"  class="form-control">                   
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Motivo da Reserva</label>
-                    </div>
-                    <div class="mb-1">                    
                         <input type="text" name="motivo"  class="form-control">
                     </div>
                 </div>
