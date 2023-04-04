@@ -22,7 +22,7 @@
                         <input type="checkbox" value="remember-me"> Me lembrar
                     </label>
             </div>
-            <button class="w-25 p-3 btn-primary" type="submit" name="acessar">LogarF
+            <button class="w-25 p-3 btn-primary" type="submit" name="acessar">Logar
         </div>
         </div>
     </form>
