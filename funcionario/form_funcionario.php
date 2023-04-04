@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once("../conexao.php");
 include_once("../includes.php");
 ?>
@@ -9,43 +9,46 @@ include_once("../includes.php");
 <body ng-app="myApp">
 
     <div ng-controller="funcionario">
-
-        <body class="bg-light">
-            <div class="modal-content rounded-4 shadow">
-                <div class="modal-header border-bottom-0">
-                    <div class="container">
-                        <form action="cadastro_funcionario.php" method="POST">
-                            <div class="form-group">
-                                <label>Nome</label>
-                                <input type="text" name="nome" class="form-control" placeholder="Preencha o Nome">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">CPF</label>
-                                <input type="text" name="cpf" maxlength="14" class="form-control cpf.mask" placeholder="Preencha o CPF" cpf-mask="('000.000.000-00')">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Função</label>
-                                <input type="text" name="funcao" class="form-control" placeholder="Preencha a função">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Emprego</label>
-                                <input type="text" name="emprego" class="form-control" placeholder="Preencha o emprego">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Telefone</label>
-                                <input type="number" name="telefone" class="form-control" placeholder="Preencha o telefone">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Email</label>
-                                <input type="text" name="email" class="form-control" placeholder="Preencha o email">
-                            </div>
-                    </div>
-                    <button type="submit" name="salvarfuncionario" class="btn btn-primary">Salvar</button>
-                    </div>
-                    <?php
-                    ?>
-                    </form>
+    <body class="bg-light">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-bottom-0">
+    <div class="container">
+            <form action="cadastro_funcionario.php" method="POST">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" name="nome" class="form-control" placeholder="Preencha o seu Nome Completo">                
                 </div>
-            </div>
-        </body>
-        </html>
+                    <div class="mb-3">                    
+                        <label class="form-label">CPF</label> 
+                        <input type="number" name="cpf" class="form-control" placeholder="Preencha o seu CPF">                   
+                    </div>
+                    <div class="mb-3">                    
+                        <label class="form-label">E-mail</label>
+                        <input type="email" name="email" class="form-control" placeholder="Preencha o seu e-mail">                    
+                    </div>
+                    <div class="mb-3">                    
+                        <label class="form-label">Telefone</label>
+                        <input type="number" name="telefone"  class="form-control" placeholder="Preencha o seu telefone">                   
+                    </div>
+                    <div class="mb-3">                    
+                        <label class="form-label">Função</label>
+                        <input type="text" name="funcao"  class="form-control" placeholder="Preencha a sua função">                   
+                    </div>
+                    <div class="mb-3">                    
+                        <label class="form-label">Emprego</label>
+                        <input type="text" name="emprego"  class="form-control" placeholder="Preencha o seu emprego">
+                    </div>      
+                    <button type="submit" name="salvarfuncionario" class="btn btn-primary">Salvar</button>
+                
+                <?php 
+                ?>
+
+         
+
+            </form>
+        </div>
+
+    </div>    
+</body>
+
+</html>
