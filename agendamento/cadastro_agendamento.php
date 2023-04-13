@@ -1,5 +1,11 @@
 <?php
 include_once("../includes.php");
+
+if (!isset($_GET["idcarro"]))
+{
+    header("Location: listar_carros_disponiveis.php");
+}
+
 if (isset($_POST["salvarAgendamento"])) {
     $conn = $_SESSION["conexao"];
 

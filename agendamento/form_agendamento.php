@@ -36,7 +36,7 @@ include_once("../includes.php");
                     </div>
                     <div class="mb-1">                    
                         <label class="form-label">Motivo da Reserva</label>
-                        <input type="text" name="motivo"  class="form-control">
+                        <input type="textarea" name="motivo"  class="form-control">
                     </div>
                 </div>
                 
