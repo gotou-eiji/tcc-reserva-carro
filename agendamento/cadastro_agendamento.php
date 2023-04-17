@@ -46,8 +46,8 @@ if (isset($_POST["salvarAgendamento"])) {
     if (!mysqli_affected_rows($conn) == 1) {
     ?>
         <script>
-            window.location.href = "cadastro_funcionario.php";
-            alert("Erro ao inserir funcionario");
+            window.location.href = "listar_carros_disponiveis.php";
+            alert("Erro ao realizar o agendamento!");
         </script>
 <?php
     }
