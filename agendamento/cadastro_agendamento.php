@@ -1,14 +1,9 @@
 <?php
 include_once("../includes.php");
 
-if (!isset($_GET["idcarro"]))
-{
-    header("Location: listar_carros_disponiveis.php");
-}
-
 if (isset($_POST["salvarAgendamento"])) {
     $conn = $_SESSION["conexao"];
-
+    $carro_idcarro = $_POST["idcarro"]; // pega id estrageira via $_GET pelo botão do reservar do "listar_carros_disponiveis.php"
     $cidade = $_POST["cidade"];
     $bairro = $_POST["bairro"];
     $data_entrada = $_POST["entrada"];
@@ -16,6 +11,12 @@ if (isset($_POST["salvarAgendamento"])) {
     $horario_entrada = $_POST["horarioEntrada"];
     $horario_saida = $_POST["horarioSaida"];
     $motivo = $_POST["motivo"];
+
+
+    if (!isset($_POST["idcarro"])) // Verifica se pegou idcarro, se não ele volta ao header.
+    {
+        header("Location:listar_carros_disponiveis.php");
+    }
 
 
 
@@ -28,8 +29,8 @@ if (isset($_POST["salvarAgendamento"])) {
     <?php
     } else {
 
-        $sql = "INSERT INTO agendamento (cidade, bairro, entrada, saida, horario_entrada, horario_saida, motivo) VALUES ('{$cidade}', '{$bairro}', '{$data_entrada}', '{$data_entrada}', '{$horario_entrada}', '{$horario_saida}', '{$motivo}')";
-
+        $sql = "INSERT INTO agendamento (carro_idcarro, cidade, bairro, entrada, saida, horario_entrada, horario_saida, motivo) VALUES ('{$carro_idcarro}','{$cidade}', '{$bairro}', '{$data_entrada}', '{$data_entrada}', '{$horario_entrada}', '{$horario_saida}', '{$motivo}')";
+      
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_affected_rows($conn) == 1) {
@@ -38,7 +39,7 @@ if (isset($_POST["salvarAgendamento"])) {
     ?>
         <script>
             window.location.href = "cadastro_agendamento.php";
-            alert("Funcionario cadastrado com sucesso!");
+            alert("Agendamento realizado com sucesso!");
         </script>
     <?php
     }
