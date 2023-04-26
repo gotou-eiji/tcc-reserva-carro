@@ -2,17 +2,17 @@
 
 <body div class="p-3 mb-2 bg-dark-subtle text-center">
 
-    <form action="login_funcionario.php" method="POST">
+    <form action="login_admin.php" method="POST">
         <div class="position-absolute top-0 start-100 translate-middle"></div>
 
 
 
-        <div class="col">Logar como Funcionário</h1>
+        <div class="col">Logar como Admin</h1>
             <div id="formContent">
                 <div class="fadeIn first">
                 </div>
                 <!-- Login Form -->
-                <form action="login_funcionario.php" method="POST">
+                <form action="login_admin.php" method="POST">
                     <input type="text" class="w-25 p-3" id="floatingInput" name="usuario" placeholder="login">
                     <div class="form-floating">
                         <input type="password" class="w-25 p-3" id="floatingPassword" name="senha" placeholder="senha">
