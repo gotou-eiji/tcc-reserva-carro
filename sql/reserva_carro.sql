@@ -126,6 +126,8 @@ CREATE TABLE IF NOT EXISTS `reserva_carro`.`login_admin` (
   PRIMARY KEY (`idlogin_admin`))
 ENGINE = InnoDB;
 
+INSERT INTO `login_admin` (`idlogin_admin`, `usuario`, `senha`) VALUES
+(1, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
