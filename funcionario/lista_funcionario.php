@@ -24,6 +24,7 @@ if (mysqli_num_rows($query) > 0) {
                                 <th scope="col">Telefone</th>
                                 <th scope="col">Função</th>
                                 <th scope="col">Emprego</th>
+                                <th scope="col">Adicionar Login</th>
                                 <th scope="col">Editar</th>
                                 <th scope="col">Excluir</th>
                             </tr>
@@ -40,6 +41,13 @@ if (mysqli_num_rows($query) > 0) {
                                     <td>' . $result["funcao"] . '</td>
                                     <td>' . $result["emprego"] . '</td>
                                     <td>
+                                    <a href="../adicionarcadastro/form_cadastros.php?idfuncionario=' . $result["idfuncionario"] . '">
+                                            <button class="btn btn-warning">
+                                                Adicionar Cadastro
+                                            </button>
+                                        </a>
+                                    </td>
+                                    <td>
                                         <a href="../telefone/form_telefone.php?ifuncionario=' . $result["idfuncionario"] . '">
                                             <button class="btn btn-primary">
                                                 Editar
@@ -48,7 +56,7 @@ if (mysqli_num_rows($query) > 0) {
                                     </td>
                                     <td>
                                         <a href="../email/form_email.php?ifuncionario=' . $result["idfuncionario"] . '">
-                                            <button class="btn btn-success">
+                                            <button class="btn btn-danger">
                                                 Excluir
                                             </button>
                                         </a>
