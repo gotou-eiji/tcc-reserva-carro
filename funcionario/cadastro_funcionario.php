@@ -10,7 +10,7 @@ if (isset($_POST["salvarfuncionario"]))
         $telefone = $_POST["telefone"];
         $funcao = $_POST["funcao"];
         $emprego = $_POST["emprego"];
-
+        $sexo = $_POST["sexo"];
 
         if (($nome == "") || ($cpf == "") || ($email == "")|| ($telefone== "")|| ($funcao== "") || ($emprego==""))
         {
@@ -25,7 +25,7 @@ if (isset($_POST["salvarfuncionario"]))
         else 
         {
 
-            $sql = "INSERT INTO FUNCIONARIO (nome, cpf, email, telefone, funcao, emprego) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$telefone}', '{$funcao}', '{$emprego}')";
+            $sql = "INSERT INTO FUNCIONARIO (nome, cpf, email, telefone, funcao, emprego, sexo) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$telefone}', '{$funcao}', '{$emprego}', '{$sexo}')";
 
             $result = mysqli_query($conn, $sql);
 

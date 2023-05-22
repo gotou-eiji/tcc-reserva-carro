@@ -37,7 +37,24 @@ include_once("../includes.php");
                     <div class="mb-3">                    
                         <label class="form-label">Emprego</label>
                         <input type="text" name="emprego"  class="form-control" placeholder="Preencha o seu emprego">
-                    </div>      
+                    </div>
+                    <div>
+                            <label class="form-label">Sexo</label>
+                        </div>
+                    <div class="d-grid gap-4 col-100 d-md-flex  justify-content-md ">
+                        <div>
+                            <input type="radio" id="masculino" name="sexo" value="masculino" />
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="feminino" name="sexo" value="feminino" />
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="outros" name="sexo" value="outros" />
+                            <label for="outros">Outros</label>
+                        </div>
+                    </div>
                     <button type="submit" name="salvarfuncionario" class="btn btn-primary">Salvar</button>
                 
                 <?php 

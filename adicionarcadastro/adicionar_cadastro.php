@@ -6,6 +6,7 @@ if (isset($_POST["salvarcadastro"]))
 
         $usuario = $_POST["usuario"];
         $senha = $_POST["senha"];
+        $tipo = $_POST["tipo"];
         $funcionario_idfuncionario = $_POST["idfuncionario"];
 
         
@@ -28,7 +29,7 @@ if (isset($_POST["salvarcadastro"]))
         else 
         {
             $senha_hash_funcionario = hash("sha256", $senha); // Variavel chama a função "hash" e então codifica em "sha256" o conteudo do que estiver em $senha_funcionario
-            $sql = "INSERT INTO login_funcionario (usuario, senha, funcionario_idfuncionario) VALUES ('{$usuario}', '{$senha_hash_funcionario}', '{$funcionario_idfuncionario}')";
+            $sql = "INSERT INTO login_funcionario (usuario, senha, tipo, funcionario_idfuncionario) VALUES ('{$usuario}', '{$senha_hash_funcionario}', '{$tipo}', '{$funcionario_idfuncionario}')";
             
             $result = mysqli_query($conn, $sql);
            

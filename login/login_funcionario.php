@@ -38,7 +38,7 @@ function verifica_usuario($usuario, $senha)
 {
     $senha = hash("sha256", $senha);
 
-    $sql = "SELECT * FROM login_funcionario WHERE usuario = '{$usuario}' AND senha = '{$senha}'";
+    $sql = "SELECT * FROM login WHERE usuario = '{$usuario}' AND senha = '{$senha}'";
 
     $result = mysqli_query($_SESSION["conexao"], $sql);
 
