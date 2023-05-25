@@ -33,6 +33,12 @@ if ($explode_url[$segmento] != "pedido") {
     $url_pedido = "";
 }
 
+if ($explode_url[$segmento] != "historico") {
+    $url_historico = $url_absoluta . "historico/";
+} else {
+    $url_historico = "";
+}
+
 ?>
 
 <ul>
@@ -69,7 +75,7 @@ if ($explode_url[$segmento] != "pedido") {
 
         <li>
             <a href="<?php
-                        echo $url_agendamento . "form_historico.php"; ?>" class="btn btn-primary"> Histórico
+                        echo $url_historico . "form_historico.php"; ?>" class="btn btn-primary"> Histórico
             </a>
         </li>
         <li>
