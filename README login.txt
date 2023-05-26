@@ -3,4 +3,4 @@ insert into funcionario (nome,cpf,email,telefone,funcao,emprego,sexo)
 insert into login (usuario,senha,tipo,funcionario_idfuncionario)
  values ("admin","8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918","1","1");
 
-//a senha do login que está criptografado é "admin".
+//o usuário e a senha do login que está criptografado é "admin".

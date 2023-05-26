@@ -19,22 +19,29 @@ if (!isset($_GET["idfuncionario"]))
         <div class="modal-content rounded-4 shadow">
       <div class="modal-header border-bottom-0">
     <div class="container">
-            <form action="adicionar_cadastro.php" method="POST">
+        <form action="adicionar_cadastro.php" method="POST">
             <input type="hidden" name="idfuncionario" class="form-control" value="
                 <?php
                 echo $_GET["idfuncionario"];
                 ?>">
-
                 <div class="form-group">
                     <label>Usuario</label>
                     <input type="text" name="usuario" class="form-control" placeholder="Preencha o usuário">                
                 </div>
-                    <div class="mb-3">                    
-                        <label class="form-label">Senha</label> 
-                        <input type="password" name="senha" class="form-control" placeholder="Preencha o seu senha">      
-                        <button type="submit" name="salvarcadastro" class="btn btn-primary">Registrar</button>             
-                    </div>
-    </form>
+                <div class="mb-3">                    
+                    <label class="form-label">Senha</label> 
+                    <input type="password" name="senha" class="form-control" placeholder="Preencha o seu senha">
+                </div>
+                <fieldset>
+                        <div>
+                            <input type="checkbox" id="admin" name="admin" value="1">
+                            <label for="admin">Admin</label>
+                        </div>
+                </fieldset>
+                <div>
+                    <button type="submit" name="salvarcadastro" class="btn btn-primary">Registrar</button>
+                </div>
+        </form>
 </body>
 </html>
 

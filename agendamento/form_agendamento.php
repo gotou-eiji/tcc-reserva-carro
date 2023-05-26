@@ -31,37 +31,38 @@ if (!isset($_GET["idcarro"]))
                     <label>Cidade destinada</label>
                     <input type="text" name="cidade" class="form-control" placeholder="Preencha o nome da cidade">                
                 </div>
-                    <div class="mb-1">                    
+                    <div class="mb-3">                    
                         <label class="form-label">Bairro</label>
                         <input type="text" name="bairro" class="form-control" placeholder="Preencha o endereço do Bairro">                   
                     </div>
-                    <div class="mb-1">                    
+                    <div class="mb-3">                    
                         <label class="form-label">Data de Entrada</label>
                         <input type="date" name="entrada" class="form-control">                   
                     </div>
-                    <div class="mb-1">                    
+                    <div class="mb-3">                    
                         <label class="form-label">Data de Saída</label>
                         <input type="date" name="saida" class="form-control">                   
                     </div>
-                    <div class="mb-1">                    
+                    <div class="mb-3">                    
                         <label class="form-label">Horário de Entrada</label>
                         <input type="time" name="horarioEntrada" class="form-control">                    
                     </div>
-                    <div class="mb-1">                    
+                    <div class="mb-3">                    
                         <label class="form-label">Horário de Saída</label>
                         <input type="time" name="horarioSaida"  class="form-control">                   
                     </div>
-                    <div class="mb-1">                    
+                    <div class="mb-3">                    
                         <label class="form-label">Motivo da Reserva</label>
                         <input type="textarea" name="motivo"  class="form-control">
                     </div>
-                </div>
-                
-                <button type="submit" name="salvarAgendamento" class="btn btn-primary">Enviar</button>
+                    <div>
+                        <button type="submit" name="salvarAgendamento" class="btn btn-primary">Enviar</button>
+                    </div>
                 
                 <?php 
                 ?>
             </form>
+            
         </div>
     </div>    
 </body>

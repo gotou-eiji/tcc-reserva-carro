@@ -23,8 +23,9 @@ include_once("../includes.php");
                             <label class="form-label">Placa</label>
                             <input type="text" size = "7" maxlength = "7" name="placa" class="form-control" placeholder="Preencha a Placa" style='text-transform:uppercase'>
                         </div>
-                </div>
-                <button type="submit" name="salvarcarro" class="btn btn-primary">Salvar</button>
+                        <div>
+                            <button type="submit" name="salvarcarro" class="btn btn-primary">Salvar</button>
+                        </div>
                 <?php
                 ?>
                 </form>

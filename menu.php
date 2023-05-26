@@ -50,8 +50,6 @@ if ($explode_url[$segmento] != "historico") {
     <div class="d-grid gap-4 col-100 d-md-flex  justify-content-md ">
         <li><a href="<?php echo $url_absoluta . "home/home.php"; ?>" class="btn btn-primary text-center">Inicio Do Site</a>
 
-        <li><a href="<?php echo $url_absoluta . "home/home.php"; ?>" class="btn btn-primary">Inicio Do Painel</a>
-
         <li>
 
             <a href="<?php

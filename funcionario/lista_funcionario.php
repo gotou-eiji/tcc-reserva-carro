@@ -28,9 +28,6 @@ if (mysqli_num_rows($query) > 0) {
                                 <th scope="col">Telefone</th>
                                 <th scope="col">Função</th>
                                 <th scope="col">Emprego</th>
-                                <th scope="col">Adicionar Login</th>
-                                <th scope="col">Editar</th>
-                                <th scope="col">Excluir</th>
                             </tr>
                         </thead>
                         <tbody>';
