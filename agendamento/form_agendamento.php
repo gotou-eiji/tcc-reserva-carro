@@ -26,11 +26,6 @@ if (!isset($_GET["idcarro"]))
                 ?>">
 
                 <div>
-                <?php
-                    $conn = $_SESSION["conexao"];
-                    $sql = "SELECT funcionario.nome FROM funcionario WHERE funcionario.idfuncionario=funcionario.idfuncionario;";
-                    print ($sql);
-                ?>
                 </div>
                 <div class="form-group">
                     <label>Cidade destinada</label>
