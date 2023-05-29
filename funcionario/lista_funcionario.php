@@ -28,6 +28,9 @@ if (mysqli_num_rows($query) > 0) {
                                 <th scope="col">Telefone</th>
                                 <th scope="col">Função</th>
                                 <th scope="col">Emprego</th>
+                                <th scope="col">Sexo</th>
+                                <th scope="col">Data de Nascimento</th>
+                                <th scope="col">CEP</th>
                             </tr>
                         </thead>
                         <tbody>';
@@ -41,6 +44,9 @@ if (mysqli_num_rows($query) > 0) {
                                     <td>' . $result["telefone"] . '</td>
                                     <td>' . $result["funcao"] . '</td>
                                     <td>' . $result["emprego"] . '</td>
+                                    <td>' . $result["sexo"] . '</td>
+                                    <td>' . $result["data_nascimento"] . '</td>
+                                    <td>' . $result["cep"] . '</td>
                                     <td>
                                     <a href="../adicionarcadastro/form_cadastros.php?idfuncionario=' . $result["idfuncionario"] . '">
                                             <button class="btn btn-warning">

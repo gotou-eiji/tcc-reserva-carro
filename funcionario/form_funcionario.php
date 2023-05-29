@@ -42,9 +42,17 @@ include_once("../includes.php");
                         <label class="form-label">Emprego</label>
                         <input type="text" name="emprego"  class="form-control" placeholder="Preencha o seu emprego">
                     </div>
+                    <div class="mb-3">                    
+                        <label class="form-label">Data de Nascimento</label>
+                        <input type="text" name="data_nascimento"  class="form-control" placeholder="Preencha a sua data de nascimento">
+                    </div>
+                    <div class="mb-3">                    
+                        <label class="form-label">CEP</label>
+                        <input type="text" name="cep"  class="form-control" placeholder="Preencha o seu CEP">
+                    </div>
                     <div>
-                            <label class="form-label">Sexo</label>
-                        </div>
+                        <label class="form-label">Sexo</label>
+                    </div>
                     <div class="d-grid gap-4 col-100 d-md-flex  justify-content-md ">
                         <div>
                             <input type="radio" id="masculino" name="sexo" value="masculino" />
