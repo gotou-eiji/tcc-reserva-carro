@@ -1,34 +1,34 @@
-<?php
-    session_start();
-?>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-<body div class="p-3 mb-2 bg-dark-subtle text-center">
-
-    <form action="login_funcionario.php" method="POST">
-        <div class="position-absolute top-0 start-100 translate-middle"></div>
-
-
-
-        <div class="col">Logar como Funcionário</h1>
-            <div id="formContent">
-                <div class="fadeIn first">
-                </div>
-                <!-- Login Form -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Login</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
                 <form action="login_funcionario.php" method="POST">
-                    <input type="text" class="w-25 p-3" id="floatingInput" name="usuario" placeholder="login">
-                    <div class="form-floating">
-                        <input type="password" class="w-25 p-3" id="floatingPassword" name="senha" placeholder="senha">
-                        <label for="floatingPassword"></label>
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <i class="bi bi-person-circle"></i>
+                        <input type="user" name="usuario" required>
+                        <label for="">User</label>
                     </div>
-                    <label>
-                        <input type="checkbox" value="remember-me"> Me lembrar
-                    </label>
+                    <div class="inputbox">
+                        <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarsenha()"></i>
+                        <input type="password" id="senha" name="senha" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me<a href="#"></a></label>
+                    </div>
+                    <button class="w-25 p-3 btn-primary" type="submit" name="acessar">Log In
+                </form>
             </div>
-            <button class="w-25 p-3 btn-primary" type="submit" name="acessar">Logar
         </div>
-        </div>
-    </form>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
