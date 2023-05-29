@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Funcionários</title>
+</head>
+<body>
+    <div class="box">
+        <fieldset>
+            <legend><b>Cadastro Funcionário</b></legend>
+            <br>
+            <form action=""></form>
+            <div class="pessoa_fisica">
+                <input type="radio" id="pessoafisica" name="pessoa" value="pessoafisica" required>
+                <label for="pessoafisica">Pessoa Física</label>
+            </div>
+            <div class="pessoa_juridica">
+                <input type="radio" id="pessoajuridica" name="pessoa" value="pessoajuridica" required>
+                <label for="pessoajuridica">Pessoa Jurídica</label>
+            </div>
+            
+            <!-- Esses sao os inputs do cadastro  -->
+            <div class="inputBox"> <!--Nome Completo !-->
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="nome">Nome completo</label>
+            </div>
+
+            <!-- CPF !-->
+            <div class="inpuBox"> <!-- CPF !-->
+                <input type="text" name="cpf" id="cpf" class="inputUser" maxlength="14" oninput="formatarCPF(this)" required>
+                <label for="cpf">CPF</label>
+                
+            </div>
+
+            <!-- Email !-->
+            <div class="inpuBox">
+                <input type="text" name="email" id="email" class="inputUser" required>
+                <label for="email">Email</label>
+            </div>
+
+            <!-- Telefone !-->
+            <div class="inpuBox">
+                <input type="text" name="telefone" id="telefone" class="inputUser" maxlength="15" oninput="formatarTelefone(this)" required>
+                <label for="telefone">Telefone</label>
+            </div>
+
+            <!-- Função !-->
+            <div class="inpuBox">
+                <input type="text" name="funcao" id="funcao" class="inputUser" required>
+                <label for="funcao">Função</label>
+            </div>
+
+            <!-- Empresa !-->
+            <div class="inpuBox">
+                <input type="text" name="empresa" id="empresa" class="inputUser" required>
+                <label for="empresa">Empresa</label>
+            </div>
+
+            <!-- CEP -->
+            <div class="inputbox">
+                <input type="text" name="cep" id="cep" class="inputUser" maxlenght="9" oninput="formatarCEP(this)" required>
+                <label for="cep">CEP</label>
+                <button>Buscar CEP</button>
+            </div>
+
+            <!-- Sexo !-->
+            <p>Sexo:</p>
+            <input type="radio" id="masculino" name="genero" value="masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="genero" value="feminino" required>
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="outros" name="genero" value="outros" required>
+            <label for="outros">Outros</label>
+        </fieldset>
+    </div>
+</body>
+</html>

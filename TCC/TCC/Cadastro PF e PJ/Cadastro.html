@@ -41,7 +41,40 @@
       <div class="form-group">
         <label for="cep">CEP:</label>
         <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCEP(this)" required>
-      </div>
+      </div> 
+
+
+      
+      <!-- <form action="cep.php" method="POST">
+        <div class="form-group">
+            <label>CEP</label>
+            <input type="text" class="form-control" name="cep" placeholder="Insira o CEP" required/>
+            <br/>
+            <br/>
+            <button type="submit" class="btn btn-outline-success">Inserir</button>
+        </div>
+    </form>
+    <?php
+      $cep = filter_input(INPUT_POST, "cep");
+      if($cep){
+      $cep = str_replace("-", "", $cep);
+
+      $json = file_get_contents('https://viacep.com.br/ws/'. $cep . '/json/');
+
+      $jsonToArray = json_decode($json);
+      ?>
+      <p>CEP: <?=$jsonToArray->cep;?></p>
+      <p>RUA: <?=$jsonToArray->logradouro;?></p>
+      <p>COMPLEMENTO: <?=$jsonToArray->complemento;?></p>
+      <p>BAIRRO: <?=$jsonToArray->bairro;?></p>
+      <p>LOCALIDADE: <?=$jsonToArray->localidade;?></p>
+      <p>UF: <?=$jsonToArray->uf;?></p>
+      <?php
+      }
+      ?> -->
+
+
+
       <div class="form-group">
         <label for="sexo">Sexo:</label>
         <select id="sexo" required>

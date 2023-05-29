@@ -1,0 +1,70 @@
+<form id="pessoaFisicaForm" style="display: none;">
+      <h2>Cadastro Pessoa Física</h2>
+      <div class="form-group">
+        <label for="nomeCompleto">Nome Completo:</label>
+        <input type="text" id="nomeCompleto" required>
+      </div>
+      <div class="form-group">
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="text" id="dataNascimento" placeholder="DD/MM/AAAA" maxlength="10" oninput="addDateMask(this)" required>
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" placeholder="XXX.XXX.XXX-XX" maxlength="14" oninput="formatarCPF(this)" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" oninput="formatarTelefone(this)" required>
+      </div>
+      <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCEP(this)" required>
+      </div> 
+
+
+      
+      <!-- <form action="cep.php" method="POST">
+        <div class="form-group">
+            <label>CEP</label>
+            <input type="text" class="form-control" name="cep" placeholder="Insira o CEP" required/>
+            <br/>
+            <br/>
+            <button type="submit" class="btn btn-outline-success">Inserir</button>
+        </div>
+    </form>
+    
+    <?php
+      $cep = filter_input(INPUT_POST, "cep");
+      if($cep){
+      $cep = str_replace("-", "", $cep);
+
+      $json = file_get_contents('https://viacep.com.br/ws/'. $cep . '/json/');
+
+      $jsonToArray = json_decode($json);
+      ?>
+      <p>CEP: <?=$jsonToArray->cep;?></p>
+      <p>RUA: <?=$jsonToArray->logradouro;?></p>
+      <p>COMPLEMENTO: <?=$jsonToArray->complemento;?></p>
+      <p>BAIRRO: <?=$jsonToArray->bairro;?></p>
+      <p>LOCALIDADE: <?=$jsonToArray->localidade;?></p>
+      <p>UF: <?=$jsonToArray->uf;?></p>
+      <?php
+      }
+      ?> -->
+
+
+
+      <div class="form-group">
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" required>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+      <button onclick="submitForm('pessoaFisica')">Enviar</button>
+    </form>
