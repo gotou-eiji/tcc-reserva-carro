@@ -7,6 +7,12 @@
 </head>
 <body>
     <section>
+        <div class="botaovoltar">
+            <form action="index.php">
+                <i class="bi bi-arrow-left"></i>
+                //TEM QUE DESENVOLVER AINDA
+            </form>
+        </div>
         <div class="form-box">
             <div class="form-value">
                 <form action="login_funcionario.php" method="POST">

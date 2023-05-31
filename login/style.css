@@ -70,6 +70,15 @@ top: -5px;
     cursor: pointer;
     
 }
+
+.botaovoltar i{
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
 .forget{
     margin: -15px 0 15px ;
     font-size: .9em;
