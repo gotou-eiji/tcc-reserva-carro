@@ -12,7 +12,7 @@
   <div class="container">
     <div id="formSelection">
       <button onclick="showForm('pessoaFisica')">Pessoa Física</button>
-      <!-- <button onclick="showForm('pessoaJuridica')">Pessoa Jurídica</button> -->
+      <button onclick="showForm('pessoaJuridica')">Pessoa Jurídica</button>
     </div>
 
     <!-- Pessoa Física -->
@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" onblur="validarEmail(this.value)" required>
+        <input type="email" id="email" required>
       </div>
       <div class="form-group">
         <label for="telefone">Telefone:</label>
@@ -40,7 +40,12 @@
       </div>
       <div class="form-group">
         <label for="cep">CEP:</label>
-        <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCEP(this)" required>
+        <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="form__atarCEP(this)" required>
+        <button onclick="pesquisacep()">Buscar CEP</button>
+        <input type="text" id="rua" readonly>
+        <input type="text" id="bairro" readonly>
+        <input type="text" id="cidade" readonly>
+        <input type="text" id="uf" readonly>
       </div>
       <div class="form-group">
         <label for="sexo">Sexo:</label>
@@ -51,11 +56,10 @@
         </select>
       </div>
       <button onclick="submitForm('pessoaFisica')">Enviar</button>
-      <button onclick="goBack()">Voltar</button>
     </form>
 
 
-    <!-- Pessoa Jurídica
+    <!-- Pessoa Jurídica -->
     <form id="pessoaJuridicaForm" style="display: none;">
       <h2>Cadastro Pessoa Jurídica</h2>
       <div class="form-group">
@@ -98,7 +102,6 @@
         </select>
       </div>
       <button onclick="submitForm('pessoaJuridica')">Enviar</button>
-      <button onclick="goBack()">Voltar</button> -->
     </form>
   </div>
 </body>

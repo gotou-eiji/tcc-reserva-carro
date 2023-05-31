@@ -2,9 +2,9 @@ function showForm(formType) {
     document.getElementById('formSelection').style.display = 'none';
     if (formType === 'pessoaFisica') {
       document.getElementById('pessoaFisicaForm').style.display = 'block';
-    } //else if (formType === 'pessoaJuridica') {
-    //   document.getElementById('pessoaJuridicaForm').style.display = 'block';
-    // }
+    } else if (formType === 'pessoaJuridica') {
+      document.getElementById('pessoaJuridicaForm').style.display = 'block';
+    }
   }
 
   function submitForm(formType) {
@@ -15,8 +15,8 @@ function showForm(formType) {
       var cpf = document.getElementById('cpf').value;
       var email = document.getElementById('email').value;
       var telefone = document.getElementById('telefone').value;
-      // var funcao = document.getElementById('funcao').value;
-      // var empresa = document.getElementById('empresa').value;
+      var funcao = document.getElementById('funcao').value;
+      var empresa = document.getElementById('empresa').value;
       var cep = document.getElementById('cep').value;
 
       // Aqui você pode fazer o que quiser com os dados da pessoa física
@@ -26,32 +26,32 @@ function showForm(formType) {
       console.log('CPF:', cpf);
       console.log('Email:', email);
       console.log('Telefone:', telefone);
-      // console.log('Função:', funcao);
-      // console.log('Empresa:', empresa);
+      console.log('Função:', funcao);
+      console.log('Empresa:', empresa);
       console.log('CEP:', cep);
-     } //else if (formType === 'pessoaJuridica') {
-    //   var nomeFantasia = document.getElementById('nomeFantasia').value;
-    //   var nomeEmpresa = document.getElementById('nomeEmpresa').value;
-    //   var telefoneJuridica = document.getElementById('telefoneJuridica').value;
-    //   var cnpj = document.getElementById('cnpj').value;
-    //   var emailJuridica = document.getElementById('emailJuridica').value;
-    //   var cepJuridica = document.getElementById('cepJuridica').value;
-    //   var razaoSocial = document.getElementById('razaoSocial').value;
-    //   var inscricaoEstadual = document.getElementById('inscricaoEstadual').value;
-    //   var tipoEmpresa = document.getElementById('tipoEmpresa').value;
+    } else if (formType === 'pessoaJuridica') {
+      var nomeFantasia = document.getElementById('nomeFantasia').value;
+      var nomeEmpresa = document.getElementById('nomeEmpresa').value;
+      var telefoneJuridica = document.getElementById('telefoneJuridica').value;
+      var cnpj = document.getElementById('cnpj').value;
+      var emailJuridica = document.getElementById('emailJuridica').value;
+      var cepJuridica = document.getElementById('cepJuridica').value;
+      var razaoSocial = document.getElementById('razaoSocial').value;
+      var inscricaoEstadual = document.getElementById('inscricaoEstadual').value;
+      var tipoEmpresa = document.getElementById('tipoEmpresa').value;
 
-    //   // Aqui você pode fazer o que quiser com os dados da pessoa jurídica
-    //   console.log('Pessoa Jurídica:');
-    //   console.log('Nome Fantasia:', nomeFantasia);
-    //   console.log('Nome da Empresa:', nomeEmpresa);
-    //   console.log('Telefone:', telefoneJuridica);
-    //   console.log('CNPJ:', cnpj);
-    //   console.log('Email:', emailJuridica);
-    //   console.log('CEP:', cepJuridica);
-    //   console.log('Razão Social:', razaoSocial);
-    //   console.log('Inscrição Estadual:', inscricaoEstadual);
-    //   console.log('Tipo de Empresa:', tipoEmpresa);
-    // }
+      // Aqui você pode fazer o que quiser com os dados da pessoa jurídica
+      console.log('Pessoa Jurídica:');
+      console.log('Nome Fantasia:', nomeFantasia);
+      console.log('Nome da Empresa:', nomeEmpresa);
+      console.log('Telefone:', telefoneJuridica);
+      console.log('CNPJ:', cnpj);
+      console.log('Email:', emailJuridica);
+      console.log('CEP:', cepJuridica);
+      console.log('Razão Social:', razaoSocial);
+      console.log('Inscrição Estadual:', inscricaoEstadual);
+      console.log('Tipo de Empresa:', tipoEmpresa);
+    }
   }
 
   // Função para formatar CPF
@@ -124,19 +124,3 @@ function formatarCEP(cepInput) {
     // Adicionando a máscara para o campo de data de nascimento
     var dataNascimentoInput = document.getElementById('dataNascimento');
     addDateMask(dataNascimentoInput);
-
-    function goBack(){
-      window.history.back()
-    }
-
-    function validarEmail(email) {
-      var regex = /\S+@\S+\.\S+/;
-      if (regex.test(email)) {
-        // Email válido
-        return true;
-      } else {
-        // Email inválido
-        alert("O email digitado não é válido!");
-        return false;
-      }
-    }
