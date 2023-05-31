@@ -7,10 +7,16 @@ include_once("../includes.php");
 if (isset($_POST["salvarcarro"])) {
     $conn = $_SESSION["conexao"];
 
+    $marca = $_POST["marca"];
     $modelo = $_POST["modelo"];
     $placa = $_POST["placa"];
+    $preco = $_POST["preco"];
+    $motorizacao = $_POST["motorizacao"];
+    $ano = $_POST["ano"];
+    $cor = $_POST["cor"];
+    $automatico = $_POST["automatico"];
 
-    if (($modelo == "") || ($placa == "")) {
+    if (($marca == "") || ($modelo == "") || ($placa == "") || ($preco == "") || ($motorizacao == "") || ($ano == "") || ($cor == "") || ($automatico == "")) {
 ?>
         <script>
             window.location.href = "form_carro.php";
@@ -18,7 +24,7 @@ if (isset($_POST["salvarcarro"])) {
         </script>
     <?php
     } else {
-        $sql = "INSERT INTO carro (modelo, placa) VALUES ('{$modelo}', '{$placa}')";
+        $sql = "INSERT INTO carro (marca, modelo, placa, preco, motorizacao, ano, cor, automatico) VALUES ('{$marca}', '{$modelo}', '{$placa}', '{$preco}', '{$motorizacao}', '{$ano}', '{$cor}', '{$automatico}')";
 
         $result = mysqli_query($conn, $sql);
 

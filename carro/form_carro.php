@@ -16,12 +16,36 @@ include_once("../includes.php");
                 <div class="container">
                     <form action="cadastro_carro.php" method="POST">
                         <div class="form-group">
+                            <label>Marca</label>
+                            <input type="text" name="marca" class="form-control" placeholder="Preencha a Marca">
+                        </div>
+                        <div class="form-group">
                             <label>Modelo</label>
                             <input type="text" name="modelo" class="form-control" placeholder="Preencha o Modelo">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Placa</label>
                             <input type="text" size = "7" maxlength = "7" name="placa" class="form-control" placeholder="Preencha a Placa" style='text-transform:uppercase'>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Preço</label>
+                            <input type="text" name="preco" class="form-control" placeholder="Preencha o Preço">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Motorização</label>
+                            <input type="text" name="motorizacao" class="form-control" placeholder="Preencha a Motorização">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Ano</label>
+                            <input type="text"  name="ano" class="form-control" placeholder="Preencha o Ano">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Cor</label>
+                            <input type="text" name="cor" class="form-control" placeholder="Preencha a Cor">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Automático</label>
+                            <input type="text" name="automatico" class="form-control" placeholder="">
                         </div>
                         <div>
                             <button type="submit" name="salvarcarro" class="btn btn-primary">Salvar</button>

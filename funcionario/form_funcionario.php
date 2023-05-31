@@ -44,7 +44,7 @@ include_once("../includes.php");
                     </div>
                     <div class="mb-3">                    
                         <label class="form-label">Data de Nascimento</label>
-                        <input type="text" name="data_nascimento"  class="form-control" placeholder="Preencha a sua data de nascimento">
+                        <input type="date" name="data_nascimento"  class="form-control" placeholder="Preencha a sua data de nascimento">
                     </div>
                     <div class="mb-3">                    
                         <label class="form-label">CEP</label>
