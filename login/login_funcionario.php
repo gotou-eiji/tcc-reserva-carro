@@ -22,16 +22,16 @@ if (isset($_POST["acessar"])) {
         $response = verifica_usuario($usuario, $senha);
 
         if ($response["response"]) {
-            while ($usuario = mysqli_fetch_assoc($response["result"])) {
-                $_SESSION["usuario_logado"] = $usuario["nome_usuario"];
-            }
+            $usuario_funcionario = mysqli_fetch_assoc($response["result"]);
+            $_SESSION["usuario_funcionario_logado"] = $usuario_funcionario["login_idlogin"];
 
+            unset($_SESSION["usuario_Funcionario_logado"]);
             header("Location: ../home/home.php");
         } else {
         ?>
             <script>
                 window.location.href = "../index.php";
-                alert("Usuário Não Encontrado!");
+                alert("Usuário não encontrado!");
             </script>
 <?php
         }

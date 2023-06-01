@@ -19,7 +19,7 @@ include_once("../includes.php");
                             <label>Marca</label>
                             <input type="text" name="marca" class="form-control" placeholder="Preencha a Marca">
                         </div>
-                        <div class="form-group">
+                        <div class="mb-3">
                             <label>Modelo</label>
                             <input type="text" name="modelo" class="form-control" placeholder="Preencha o Modelo">
                         </div>
@@ -43,13 +43,23 @@ include_once("../includes.php");
                             <label class="form-label">Cor</label>
                             <input type="text" name="cor" class="form-control" placeholder="Preencha a Cor">
                         </div>
-                        <div class="mb-3">
+                        <div>
                             <label class="form-label">Automático</label>
-                            <input type="text" name="automatico" class="form-control" placeholder="">
                         </div>
+                            <div class="d-grid gap-4 col-100 d-md-flex  justify-content-md ">
+                            <div>
+                                <input type="radio" id="sim" name="automatico" value="sim" />
+                                <label for="sim">Sim</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="nao" name="automatico" value="nao" />
+                                <label for="nao">Não</label>
+                            </div>
+                    </div>
                         <div>
                             <button type="submit" name="salvarcarro" class="btn btn-primary">Salvar</button>
                         </div>
+
                 <?php
                 ?>
                 </form>
