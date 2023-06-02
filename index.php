@@ -27,7 +27,7 @@ include_once("cabecalho.php");
     </ul>
 
     <div class="col-md-3 text-end">
-      <form action="login/logar_funcionario.php" method="POST">
+      <form action="login/logar_funcionario.html" method="POST">
         <button type="submit" class="btn btn-outline-primary me-2" name="entrar"> Login</button>
     </div>
   </header>

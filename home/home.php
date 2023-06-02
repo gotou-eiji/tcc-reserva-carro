@@ -1,4 +1,5 @@
 <?php
+    include '../verifica_sessao.php';
     session_start();
 ?>
 

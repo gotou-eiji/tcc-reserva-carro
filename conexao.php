@@ -1,5 +1,4 @@
 <?php
-
 require_once("verifica_sessao.php");
 
 $hostname = "localhost";

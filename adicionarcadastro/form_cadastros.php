@@ -16,8 +16,7 @@ if (!isset($_GET["idfuncionario"]))
 
 
 
-        <div class="modal-content rounded-4 shadow">
-      <div class="modal-header border-bottom-0">
+    <div class="modal-header border-bottom-0">
     <div class="container">
         <form action="adicionar_cadastro.php" method="POST">
             <input type="hidden" name="idfuncionario" class="form-control" value="
@@ -25,7 +24,7 @@ if (!isset($_GET["idfuncionario"]))
                 echo $_GET["idfuncionario"];
                 ?>">
                 <div class="form-group">
-                    <label>Usuario</label>
+                    <label>Usuário</label>
                     <input type="text" name="usuario" class="form-control" placeholder="Preencha o usuário">                
                 </div>
                 <div class="mb-3">                    

@@ -15,8 +15,7 @@ if (!isset($_GET["idcarro"]))
 
     <div ng-controller="Agendamento">
     <body class="bg-light">
-    <div class="modal-content rounded-4 shadow">
-      <div class="modal-header border-bottom-0">
+    <div class="modal-header border-bottom-0">
     <div class="container">
             <form action="cadastro_agendamento.php" method="POST">
             

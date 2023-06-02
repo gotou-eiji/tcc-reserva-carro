@@ -31,7 +31,7 @@ if (isset($_POST["acessar"])) {
         ?>
             <script>
                 window.location.href = "../index.php";
-                alert("Usuário não encontrado!");
+                alert("Usuário ou senha incorreto!");
             </script>
 <?php
         }

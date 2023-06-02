@@ -11,7 +11,6 @@ include_once("../includes.php");
 <div ng-controller="funcionario">
 
     <body class="bg-light">
-        <div class="modal-content rounded-4 shadow">
             <div class="modal-header border-bottom-0">
                 <div class="container">
                     <form action="cadastro_carro.php" method="POST">
