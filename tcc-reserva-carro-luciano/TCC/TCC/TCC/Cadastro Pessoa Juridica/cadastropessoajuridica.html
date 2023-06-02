@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Jurídica</title>
+</head>
+<body>
+    <div class="box">
+        <fieldset>
+            <legend><b>Cadastro Pessoa Jurídica</b></legend>
+            <br>
+            <form action=""></form>
+            <div class="pessoa_fisica">
+                <input type="radio" id="pessoafisica" name="pessoa" value="pessoafisica" required>
+                <label for="pessoafisica">Pessoa Física</label>
+            </div>
+            <div class="pessoa_juridica">
+                <input type="radio" id="pessoajuridica" name="pessoa" value="pessoajuridica" required>
+                <label for="pessoajuridica">Pessoa Jurídica</label>
+            </div>
+            
+            <!-- Esses sao os inputs do cadastro  -->
+
+
+            <div class="inputBox"> <!--Nome Fantasia !-->
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="nome">Nome Fantasia</label>
+            </div>
+
+            <!--Nome da Empresa !-->
+            <div class="inputBox"> 
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="nome">Nome da Empresa</label>
+            </div>
+
+            <!-- CNPJ !-->
+            <div class="inpuBox"> <!-- CNPJ !-->
+                <input type="text" name="cpf" id="cpf" class="inputUser" maxlength="14" oninput="formatarCPF(this)" required>
+                <label for="cpf">CNPJ</label>
+            </div>
+
+            <!-- Razão Social -->
+            <div class="inputbox">
+                <input type="text" name="razaosocial" id="razaosocial" class="inputUser" required>
+                <label for="cerazaosocial">Razao Social</label>
+            </div>
+
+            <!-- Inscrição Estadual -->
+            <div class="inputbox">
+                <input type="text" name="inscricaoestadual" id="inscricaoestadual" class="inputUser" required>
+                <label for="inscricaoestadual">Inscricao Estadual</label>
+            </div>
+
+            <!-- Micro ou grande empresa -->
+            <div class="inputbox">
+                <input type="text" name="microougrandeempresa" id="microougrandeempresa" class="inputUser" required>
+                <label for="microougrandeempresa">Micro ou Grande Empresa</label>
+            </div>
+
+            <!-- Email !-->
+            <div class="inpuBox">
+                <input type="text" name="email" id="email" class="inputUser" required>
+                <label for="email">Email</label>
+            </div>
+
+            <!-- Telefone !-->
+            <div class="inpuBox">
+                <input type="text" name="telefone" id="telefone" class="inputUser" maxlength="15" oninput="formatarTelefone(this)" required>
+                <label for="telefone">Telefone</label>
+            </div>
+
+            <!-- CEP -->
+            <div class="inputbox">
+                <input type="text" name="cep" id="cep" class="inputUser" maxlenght="9" oninput="formatarCEP(this)" required>
+                <label for="cep">CEP</label>
+                <button>Buscar CEP</button>
+            </div>
+
+
+
+        </fieldset>
+    </div>
+</body>
+</html>

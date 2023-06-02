@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Máscaras de CPF e Telefone</title>
+  <style>
+    input {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Máscaras de CPF e Telefone</h1>
+
+  <label for="cpf">CPF:</label>
+  <input type="text" id="cpf" maxlength="14" oninput="formatarCPF(this)">
+
+  <label for="telefone">Telefone:</label>
+  <input type="text" id="telefone" maxlength="15" oninput="formatarTelefone(this)">
+
+  <script src="script.js"></script>
+</body>
+</html>
