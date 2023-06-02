@@ -82,7 +82,7 @@ if ($explode_url[$segmento] != "historico") {
             </a>
         </li>
 
-        <a href="../index.php" class="btn btn-danger">Sair</a>
+        <a href="../excluirsessao.php" name="sair" class="btn btn-danger">Sair</a>
 
         <svg class="bi" width="1em" height="1em">
             <use xlink:href="#toggles2"></use>
