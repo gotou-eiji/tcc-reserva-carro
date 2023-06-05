@@ -34,7 +34,7 @@ if (isset($_POST["salvarAgendamento"])) {
     <?php
     } else {
 
-        $sql = "INSERT INTO agendamento (login_idlogin,carro_idcarro, cidade, bairro, entrada, saida, horario_entrada, horario_saida, motivo) VALUES ('{$login_idlogin}','{$carro_idcarro}','{$cidade}', '{$bairro}', '{$data_entrada}', '{$data_entrada}', '{$horario_entrada}', '{$horario_saida}', '{$motivo}')";
+        $sql = "INSERT INTO agendamento (login_idlogin, carro_idcarro, cidade, bairro, entrada, saida, horario_entrada, horario_saida, motivo) VALUES ('{$login_idlogin}','{$carro_idcarro}','{$cidade}', '{$bairro}', '{$data_entrada}', '{$data_saida}', '{$horario_entrada}', '{$horario_saida}', '{$motivo}')";
       
         $result = mysqli_query($conn, $sql);
 

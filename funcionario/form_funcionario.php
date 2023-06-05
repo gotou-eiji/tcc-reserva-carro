@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <?php 
 include_once("../conexao.php");
 include_once("../includes.php");
@@ -14,7 +10,7 @@ include_once("../includes.php");
 
     <div ng-controller="funcionario">
     <body class="bg-light">
-    <div class="modal-header border-bottom-0">
+      <div class="modal-header border-bottom-0">
     <div class="container">
             <form action="cadastro_funcionario.php" method="POST">
                 <div class="form-group">
@@ -40,15 +36,15 @@ include_once("../includes.php");
                     <div class="mb-3">                    
                         <label class="form-label">Emprego</label>
                         <input type="text" name="emprego"  class="form-control" placeholder="Preencha o seu emprego">
-                    </div>
+                    </div>      
                     <div class="mb-3">                    
-                        <label class="form-label">Data de Nascimento</label>
-                        <input type="date" name="data_nascimento"  class="form-control" placeholder="Preencha a sua data de nascimento">
-                    </div>
+                        <label class="form-label">Data De Nascimento</label>
+                        <input type="text" name="data_nascimento"  class="form-control" placeholder="Preencha o seu emprego">
+                    </div>    
                     <div class="mb-3">                    
                         <label class="form-label">CEP</label>
-                        <input type="text" name="cep"  class="form-control" placeholder="Preencha o seu CEP">
-                    </div>
+                        <input type="text" name="cep"  class="form-control" placeholder="Preencha o seu emprego">
+                    </div>    
                     <div>
                         <label class="form-label">Sexo</label>
                     </div>

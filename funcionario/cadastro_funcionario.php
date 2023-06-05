@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <?php 
 include_once("../includes.php");
 if (isset($_POST["salvarfuncionario"]))
@@ -18,11 +14,12 @@ if (isset($_POST["salvarfuncionario"]))
         $data_nascimento = $_POST["data_nascimento"];
         $cep = $_POST["cep"];
 
-        if (($nome == "") || ($cpf == "") || ($email == "")|| ($telefone== "")|| ($funcao== "") || ($emprego=="") || ($data_nascimento=="") || ($cep==""))
+
+        if (($nome == "") || ($cpf == "") || ($email == "")|| ($telefone== "")|| ($funcao== "") || ($emprego=="")|| ($sexo=="")|| ($data_nascimento=="")|| ($cep==""))
         {
             ?>
             <script>
-                window.location.href = "form_funcionario.php";
+                window.location.href = "lista_funcionario.php";
                 alert("Você precisa preencher os dados!");
     
             </script>
@@ -36,11 +33,11 @@ if (isset($_POST["salvarfuncionario"]))
             $result = mysqli_query($conn, $sql);
 
            if (mysqli_affected_rows($conn) == 1) {
-                $_SESSION["idfuncionario"] = mysqli_insert_id($conn);   
+                //$_SESSION["idfuncionario"] = mysqli_insert_id($conn);   
             }
             ?>
             <script>
-                window.location.href = "cadastro_funcionario.php";
+                window.location.href = "lista_funcionario.php";
                 alert("Funcionario cadastrado com sucesso!");
             </script>
             <?php  
@@ -49,7 +46,7 @@ if (!mysqli_affected_rows($conn) == 1)
 {
     ?>
     <script>
-        window.location.href = "cadastro_funcionario.php";
+        window.location.href = "lista_funcionario.php";
         alert("Erro ao inserir funcionário!");
     </script>
     <?php  

@@ -49,25 +49,14 @@ if ($explode_url[$segmento] != "historico") {
     </body>
     <div class="d-grid gap-4 col-100 d-md-flex  justify-content-md ">
         <li><a href="<?php echo $url_absoluta . "home/home.php"; ?>" class="btn btn-primary text-center">Inicio Do Site</a>
-
-        <li>
-
-            <a href="<?php
-                        echo $url_funcionario . "form_funcionario.php"; ?>" class="btn btn-primary">Cadastrar funcionario</a>
-        </li>
         <li>
             <a href="<?php
-                        echo $url_funcionario . "lista_funcionario.php"; ?>" class="btn btn-primary"> Listar funcionario
+                        echo $url_funcionario . "lista_funcionario.php"; ?>" class="btn btn-primary"> Funcionário
             </a>
         </li>
         <li>
             <a href="<?php
-                        echo $url_carro . "form_carro.php"; ?>" class="btn btn-primary"> Cadastrar carro
-            </a>
-        </li>
-        <li>
-            <a href="<?php
-                        echo $url_carro . "lista_carro.php"; ?>" class="btn btn-primary"> Listar carro
+                        echo $url_carro . "lista_carro.php"; ?>" class="btn btn-primary"> Veículos
             </a>
         </li>
 
@@ -78,7 +67,7 @@ if ($explode_url[$segmento] != "historico") {
         </li>
         <li>
             <a href="<?php
-                        echo $url_agendamento . "form_agendamento.php"; ?>" class="btn btn-primary"> Fazer agendamento
+                        echo $url_agendamento . "form_agendamento.php"; ?>" class="btn btn-primary"> Agendamento
             </a>
         </li>
 
