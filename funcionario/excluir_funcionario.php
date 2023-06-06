@@ -1,5 +1,5 @@
 <?php
-include_once("../includes.php");
+include_once("../sessao/includes.php");
 if (isset($_POST["excluir_funcionario"])){
 
     $conn = $_SESSION["conexao"];

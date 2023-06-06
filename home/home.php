@@ -1,10 +1,10 @@
 <?php
-    include '../verifica_sessao.php';
+    include '../sessao/verifica_sessao.php';
     session_start();
 ?>
 
 <?php
-include_once("../includes.php");
+include_once("../sessao/includes.php");
 ?>
 <main>
   <h1 class="visually-hidden">Heroes examples</h1>

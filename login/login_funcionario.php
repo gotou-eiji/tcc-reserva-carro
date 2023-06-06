@@ -4,7 +4,7 @@
 
 <?php
 
-require_once("../conexao.php");
+require_once("../sessao/conexao.php");
 
 if (isset($_POST["acessar"])) {
     $usuario = $_POST["usuario"];

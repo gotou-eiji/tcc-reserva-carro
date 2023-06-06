@@ -1,5 +1,5 @@
 <?php 
-include_once("../conexao.php");
+include_once("../sessao/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,8 @@ include_once("../conexao.php");
         <input type="hidden" name="funcao" class="form-control" value="<?php echo $_GET["funcao"]; ?>">
         <input type="hidden" name="data_nascimento" class="form-control" value="<?php echo $_GET["data_nascimento"]; ?>">
         <input type="hidden" name="cep" class="form-control" value="<?php echo $_GET["cep"]; ?>">
+        <input type="hidden" name="numero" class="form-control" value="<?php echo $_GET["numero"]; ?>">
+        <input type="hidden" name="complemento" class="form-control" value="<?php echo $_GET["complemento"]; ?>">
 
 
     <body class="bg-light">
@@ -68,6 +70,16 @@ include_once("../conexao.php");
     <div class="form-content">                  
         <label for="cep" class="form-label">CEP</label>
         <input id="cep" type="number" name="cep"  class="form-control" value="<?php echo $_GET["cep"]; ?>">
+        <a>Aqui vai a mensagem de erro....</a>
+    </div>
+    <div class="form-content">                  
+        <label for="numero" class="form-label">Número</label>
+        <input id="numero" type="text" name="numero"  class="form-control" value="<?php echo $_GET["numero"]; ?>">
+        <a>Aqui vai a mensagem de erro....</a>
+    </div>
+    <div class="form-content">                  
+        <label for="complemento" class="form-label">Complemento</label>
+        <input id="complemento" type="text" name="complemento"  class="form-control" value="<?php echo $_GET["complemento"]; ?>">
         <a>Aqui vai a mensagem de erro....</a>
     </div>
 

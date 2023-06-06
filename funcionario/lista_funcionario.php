@@ -1,5 +1,5 @@
 <?php
-include_once("../includes.php");
+include_once("../sessao/includes.php");
 ?>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -13,7 +13,7 @@ include_once("../includes.php");
 
     <?php
     $conn = $_SESSION["conexao"];
-    $sql = "SELECT * FROM FUNCIONARIO";
+    $sql = "SELECT * FROM funcionario";
     $query = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($query) > 0) {
@@ -29,6 +29,8 @@ include_once("../includes.php");
                         <th scope="col">Emprego</th>
                         <th scope="col">Data Nasc.</th>
                         <th scope="col">CEP</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Complemento</th>
                         <th scope="col">Sexo</th>
                         <th scope="col">Ações</th>
                     </tr>
@@ -47,10 +49,12 @@ include_once("../includes.php");
                     <td>' . $result["emprego"] . '</td>
                     <td>' . $result["data_nascimento"] . '</td>
                     <td>' . $result["cep"] . '</td>
+                    <td>' . $result["numero"] . '</td>
+                    <td>' . $result["complemento"] . '</td>
                     <td>' . $result["sexo"] . '</td>
                     <td>
                     <a href="../adicionarcadastro/form_cadastros.php?idfuncionario=' . $result["idfuncionario"] . '">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="Yellow" class="bi bi-person-fill-add" viewBox="0 0 16 16">
                             <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                             <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
                         </svg>

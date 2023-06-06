@@ -1,7 +1,8 @@
 <?php
 include_once("../sessao/includes.php");
-if (isset($_POST["salvarcarro"])) {
+if (isset($_POST["editar_carro"])) {
     $conn = $_SESSION["conexao"];
+    $idcarro = $_POST["idcarro"];
     $modelo = $_POST["modelo"];
     $placa = $_POST["placa"];
     $preco = $_POST["preco"];
@@ -11,15 +12,15 @@ if (isset($_POST["salvarcarro"])) {
     $automatico = $_POST["automatico"];
     $marca = $_POST["marca"];
     $imagem = $_FILES["imagem"];
+
     if (($modelo == "") || ($placa == "") || ($preco == "")) {
         ?>
         <script>
-            window.location.href = "form_carro.php";
+            window.location.href = "lista_carro.php";
             alert("Você precisa preencher os dados!");
         </script>
         <?php
     } else {
-
         $imagem = $_FILES["imagem"];
 
         // Verificar se uma imagem foi enviada
@@ -33,7 +34,7 @@ if (isset($_POST["salvarcarro"])) {
             } else {
                 ?>
                 <script>
-                    window.location.href = "lista_carro.php";
+                    window.location.href = "atualizar_carro.php";
                     alert("Erro ao fazer upload da imagem!");
                 </script>
                 <?php
@@ -42,7 +43,7 @@ if (isset($_POST["salvarcarro"])) {
             $imagemPath = ""; // Caso nenhum arquivo tenha sido enviado
         }
 
-        $sql = "INSERT INTO carro (modelo, placa, preco, motorizacao, ano, cor, automatico, marca, imagem) VALUES ('{$modelo}', '{$placa}', '{$preco}', '{$motorizacao}', '{$ano}', '{$cor}', '{$automatico}', '{$marca}', '{$imagemPath}')";
+        $sql = "UPDATE carro SET modelo = '{$modelo}', placa = '{$placa}', preco = '{$preco}', motorizacao = '{$motorizacao}' , ano = '{$ano}', cor = '{$cor}', automatico = '{$automatico}', marca = '{$marca}', imagem = '{$imagemPath}' WHERE idcarro = '$idcarro'";
 
         $result = mysqli_query($conn, $sql);
 
@@ -50,15 +51,15 @@ if (isset($_POST["salvarcarro"])) {
             //$_SESSION["idcarro"] = mysqli_insert_id($conn);
             ?>
             <script>
-                window.location.href = "cadastro_carro.php";
-                alert("Carro cadastrado com sucesso!");
+                window.location.href = "lista_carro.php";
+                alert("Carro atualizado com sucesso!");
             </script>
             <?php
         } else {
             ?>
             <script>
-                window.location.href = "cadastro_carro.php";
-                alert("Erro ao inserir carro!");
+                window.location.href = "lista_carro.php";
+                alert("Erro ao atualizar carro!");
             </script>
             <?php
         }

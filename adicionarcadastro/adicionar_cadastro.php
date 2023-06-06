@@ -3,7 +3,7 @@
 ?>
 
 <?php
-include_once("../includes.php");
+include_once("../sessao/includes.php");
 if (isset($_POST["salvarcadastro"]))
 {
     $conn = $_SESSION["conexao"];
