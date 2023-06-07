@@ -27,6 +27,7 @@ if (mysqli_num_rows($query) > 0) {
                     <th scope="col">Ano</th>
                     <th scope="col">Cor</th>
                     <th scope="col">Automático</th>
+                    <th scope="col">Imagem</th>
                 </tr>
             </thead>
             <tbody>';
@@ -42,6 +43,9 @@ if (mysqli_num_rows($query) > 0) {
             <td>' . $result["ano"] . '</td>
             <td>' . $result["cor"] . '</td>
             <td>' . $result["automatico"] . '</td>
+            <td>
+                <img src="' . $result["imagem"] . '" alt="Imagem do Carro" style="max-width: 200px; max-height: 200px;">
+            </td>
             <td>
                 <a href="form_agendamento.php?idcarro=' . $result["idcarro"] . '">
                     <button class="btn btn-success">

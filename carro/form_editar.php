@@ -8,7 +8,6 @@ include_once("../sessao/includes.php");
 
     <body class="bg-light">
         
-        <div class="modal-content rounded-4 shadow">
             <div class="modal-header border-bottom-0">
                 <div class="container">
                 <form action="editar_carro.php" method="POST" enctype="multipart/form-data">

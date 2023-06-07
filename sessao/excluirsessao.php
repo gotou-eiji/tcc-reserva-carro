@@ -5,6 +5,6 @@ if (isset($_POST["sair"]))
     session_destroy();
  ?>
     <script>
-        window.location.href = "index.php";
+        window.location.href = "../index.php";
         alert("Deslogado com sucesso!");
     </script>

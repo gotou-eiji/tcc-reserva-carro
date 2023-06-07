@@ -8,6 +8,7 @@ include_once("../sessao/includes.php");
 if (isset($_POST["salvarAgendamento"])) {
     $conn = $_SESSION["conexao"];
     $login_idlogin = $_SESSION["usuario_funcionario_logado"];
+    $funcionario_idfuncionario = $login_idlogin;
     $carro_idcarro = $_POST["idcarro"]; // pega id estrageira via $_GET pelo botão do reservar do "listar_carros_disponiveis.php"
     $cidade = $_POST["cidade"];
     $bairro = $_POST["bairro"];
@@ -34,7 +35,7 @@ if (isset($_POST["salvarAgendamento"])) {
     <?php
     } else {
 
-        $sql = "INSERT INTO agendamento (login_idlogin, carro_idcarro, cidade, bairro, entrada, saida, horario_entrada, horario_saida, motivo) VALUES ('{$login_idlogin}','{$carro_idcarro}','{$cidade}', '{$bairro}', '{$data_entrada}', '{$data_saida}', '{$horario_entrada}', '{$horario_saida}', '{$motivo}')";
+        $sql = "INSERT INTO agendamento (login_idlogin, funcionario_idfuncionario, carro_idcarro, cidade, bairro, entrada, saida, horario_entrada, horario_saida, motivo) VALUES ('{$login_idlogin}', '{$funcionario_idfuncionario}', '{$carro_idcarro}','{$cidade}', '{$bairro}', '{$data_entrada}', '{$data_saida}', '{$horario_entrada}', '{$horario_saida}', '{$motivo}')";
       
         $result = mysqli_query($conn, $sql);
 

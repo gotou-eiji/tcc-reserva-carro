@@ -23,6 +23,10 @@ if (!isset($_GET["idcarro"]))
                 <?php
                 echo $_GET["idcarro"];
                 ?>">
+                <input type="hidden" name="imagem" class="form-control" value="
+                <?php
+                echo $_GET["imagem"];
+                ?>">
 
                 <div>
                 </div>
