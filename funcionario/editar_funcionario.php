@@ -13,12 +13,9 @@ if (isset($_POST["editar_funcionario"]))
     $sexo = $_POST["sexo"];
     $data_nascimento = $_POST["data_nascimento"];
     $cep = $_POST["cep"];
-    $numero = $_POST["numero"];
-    $complemento = $_POST["complemento"];
-    //$cnh = $_POST["cnh"];
 
 
-        if (($nome == "") || ($cpf == "") || ($email == "")|| ($telefone== "")|| ($funcao== "") || ($emprego=="") || ($sexo=="") || ($data_nascimento=="") || ($cep=="") || ($numero=="") || ($complemento==""))
+        if (($nome == "") || ($cpf == "") || ($email == "")|| ($telefone== "")|| ($funcao== "") || ($emprego=="") || ($sexo=="") || ($data_nascimento=="") || ($cep==""))
         {
             ?>
             <script>
@@ -31,7 +28,7 @@ if (isset($_POST["editar_funcionario"]))
         else 
         {
 
-            $sql = "UPDATE FUNCIONARIO SET nome = '{$nome}', cpf = '{$cpf}', email = '{$email}', telefone = '{$telefone}', funcao = '{$funcao}', emprego = '{$emprego}' , sexo = '{$sexo}', data_nascimento = '{$data_nascimento}', cep = '{$cep}', numero = '{$numero}', complemento = '{$complemento}' WHERE idfuncionario = '$idfuncionario'";
+            $sql = "UPDATE FUNCIONARIO SET nome = '{$nome}', cpf = '{$cpf}', email = '{$email}', telefone = '{$telefone}', funcao = '{$funcao}', emprego = '{$emprego}' , sexo = '{$sexo}', data_nascimento = '{$data_nascimento}', cep = '{$cep}'WHERE idfuncionario = '$idfuncionario'";
 
             $result = mysqli_query($conn, $sql);
 

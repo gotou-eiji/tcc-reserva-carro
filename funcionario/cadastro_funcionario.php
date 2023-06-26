@@ -13,12 +13,9 @@ if (isset($_POST["salvarfuncionario"]))
         $sexo = $_POST["sexo"];
         $data_nascimento = $_POST["data_nascimento"];
         $cep = $_POST["cep"];
-        $numero = $_POST["numero"];
-        $complemento = $_POST["complemento"];
-        //$cnh = $_POST["cnh"];
 
 
-        if (($nome == "") || ($cpf == "") || ($email == "")|| ($telefone== "")|| ($funcao== "") || ($emprego=="")|| ($sexo=="")|| ($data_nascimento=="")|| ($cep=="") || ($numero=="") || ($complemento==""))
+        if (($nome == "") || ($cpf == "") || ($email == "")|| ($telefone== "")|| ($funcao== "") || ($emprego=="")|| ($sexo=="")|| ($data_nascimento=="")|| ($cep==""))
         {
             ?>
             <script>
@@ -31,7 +28,7 @@ if (isset($_POST["salvarfuncionario"]))
         else 
         {
 
-            $sql = "INSERT INTO FUNCIONARIO (nome, cpf, email, telefone, funcao, emprego, sexo, data_nascimento, cep, numero, complemento) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$telefone}', '{$funcao}', '{$emprego}', '{$sexo}', '{$data_nascimento}', '{$cep}', '{$numero}', '{$complemento}')";
+            $sql = "INSERT INTO FUNCIONARIO (nome, cpf, email, telefone, funcao, emprego, sexo, data_nascimento, cep) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$telefone}', '{$funcao}', '{$emprego}', '{$sexo}', '{$data_nascimento}', '{$cep}')";
 
             $result = mysqli_query($conn, $sql);
 

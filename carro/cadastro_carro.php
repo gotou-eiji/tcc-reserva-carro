@@ -1,7 +1,10 @@
+<link rel="stylesheet" href="../funcionario/style2.css"  />
+
 <?php
 include_once("../sessao/includes.php");
 if (isset($_POST["salvarcarro"])) {
     $conn = $_SESSION["conexao"];
+    $quilometragem_inicial = $_POST["quilometragem_inicial"];
     $modelo = $_POST["modelo"];
     $placa = $_POST["placa"];
     $preco = $_POST["preco"];
@@ -24,7 +27,7 @@ if (isset($_POST["salvarcarro"])) {
 
         // Verificar se uma imagem foi enviada
         if ($imagem["name"] !== "") {
-            $uploadDir = "imagens_carros/";
+            $uploadDir = "../imagens_carros/";
             $uploadFile = $uploadDir . basename($imagem["name"]);
 
             // Verificar se o upload foi bem-sucedido
@@ -42,7 +45,7 @@ if (isset($_POST["salvarcarro"])) {
             $imagemPath = ""; // Caso nenhum arquivo tenha sido enviado
         }
 
-        $sql = "INSERT INTO carro (modelo, placa, preco, motorizacao, ano, cor, automatico, marca, imagem) VALUES ('{$modelo}', '{$placa}', '{$preco}', '{$motorizacao}', '{$ano}', '{$cor}', '{$automatico}', '{$marca}', '{$imagemPath}')";
+        $sql = "INSERT INTO carro (quilometragem_inicial, modelo, placa, preco, motorizacao, ano, cor, automatico, marca, imagem) VALUES ('{$quilometragem_inicial}','{$modelo}', '{$placa}', '{$preco}', '{$motorizacao}', '{$ano}', '{$cor}', '{$automatico}', '{$marca}', '{$imagemPath}')";
 
         $result = mysqli_query($conn, $sql);
 
@@ -50,14 +53,14 @@ if (isset($_POST["salvarcarro"])) {
             //$_SESSION["idcarro"] = mysqli_insert_id($conn);
             ?>
             <script>
-                window.location.href = "cadastro_carro.php";
+                window.location.href = "lista_carro.php";
                 alert("Carro cadastrado com sucesso!");
             </script>
             <?php
         } else {
             ?>
             <script>
-                window.location.href = "cadastro_carro.php";
+                window.location.href = "lista_carro.php";
                 alert("Erro ao inserir carro!");
             </script>
             <?php

@@ -1,6 +1,8 @@
 <?php 
 include_once("../sessao/conexao.php");
+include_once("../sessao/includes.php");
 ?>
+<link rel="stylesheet" href="../funcionario/style2.css"  />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,11 @@ include_once("../sessao/conexao.php");
 <script src="./angular/funcionario.js"></script>
 </head>
 
-        <input type="hidden" name="idfuncionario" class="form-control" value="<?php echo $_GET["idfuncionario"]; ?>">
+    <div class="container">
+
+<form id="form" class="form" action="editar_funcionario.php" method="POST">
+
+<input type="hidden" name="idfuncionario" class="form-control" value="<?php echo $_GET["idfuncionario"]; ?>">
         <input type="hidden" name="nome" class="form-control" value="<?php echo $_GET["nome"]; ?>">
         <input type="hidden" name="cpf" class="form-control" value="<?php echo $_GET["cpf"]; ?>">
         <input type="hidden" name="email" class="form-control" value="<?php echo $_GET["email"]; ?>">
@@ -24,17 +30,13 @@ include_once("../sessao/conexao.php");
         <input type="hidden" name="funcao" class="form-control" value="<?php echo $_GET["funcao"]; ?>">
         <input type="hidden" name="data_nascimento" class="form-control" value="<?php echo $_GET["data_nascimento"]; ?>">
         <input type="hidden" name="cep" class="form-control" value="<?php echo $_GET["cep"]; ?>">
-        <input type="hidden" name="numero" class="form-control" value="<?php echo $_GET["numero"]; ?>">
-        <input type="hidden" name="complemento" class="form-control" value="<?php echo $_GET["complemento"]; ?>">
 
 
-    <body class="bg-light">
-    <div class="container">
-
-<form id="form" class="form" action="editar_funcionario.php" method="POST">
+    <center>
     <section class="header">
-      <h2>ATUALIZAR</h2>
+      <h2>Editar dados </h2>
     </section>
+</center>
       <div class="form-content">
         <label for="Nome">Nome Completo</label>
         <input  id="Nome" type="text" name="nome" class="form-control" value="<?php echo $_GET["nome"]; ?>">
@@ -64,22 +66,12 @@ include_once("../sessao/conexao.php");
     </div>
     <div class="form-content">                  
         <label for="data" class="form-label">Data de Nascimento</label>
-        <input id="data" type="text" name="data_nascimento"  class="form-control" value="<?php echo $_GET["data_nascimento"]; ?>">
+        <input id="data" type="date" name="data_nascimento"  class="form-control" value="<?php echo $_GET["data_nascimento"]; ?>">
         <a>Aqui vai a mensagem de erro....</a>
     </div>
     <div class="form-content">                  
         <label for="cep" class="form-label">CEP</label>
         <input id="cep" type="number" name="cep"  class="form-control" value="<?php echo $_GET["cep"]; ?>">
-        <a>Aqui vai a mensagem de erro....</a>
-    </div>
-    <div class="form-content">                  
-        <label for="numero" class="form-label">Número</label>
-        <input id="numero" type="text" name="numero"  class="form-control" value="<?php echo $_GET["numero"]; ?>">
-        <a>Aqui vai a mensagem de erro....</a>
-    </div>
-    <div class="form-content">                  
-        <label for="complemento" class="form-label">Complemento</label>
-        <input id="complemento" type="text" name="complemento"  class="form-control" value="<?php echo $_GET["complemento"]; ?>">
         <a>Aqui vai a mensagem de erro....</a>
     </div>
 

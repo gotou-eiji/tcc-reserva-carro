@@ -1,6 +1,6 @@
 <?php
+session_start();
 require_once("verifica_sessao.php");
-
 $hostname = "localhost";
 $database = "reserva_carro";
 $user = "root";
@@ -12,4 +12,7 @@ if (!$conn) {
     die(mysqli_error($sql));
 } else {
     $_SESSION["conexao"] = $conn;
+    
+   
+
 }

@@ -4,6 +4,7 @@ if (isset($_POST["editar_carro"])) {
     $conn = $_SESSION["conexao"];
     $idcarro = $_POST["idcarro"];
     $modelo = $_POST["modelo"];
+    $quilometragem_inicial = $_POST["quilometragem_inicial"];
     $placa = $_POST["placa"];
     $preco = $_POST["preco"];
     $motorizacao = $_POST["motorizacao"];
@@ -25,7 +26,7 @@ if (isset($_POST["editar_carro"])) {
 
         // Verificar se uma imagem foi enviada
         if ($imagem["name"] !== "") {
-            $uploadDir = "imagens_carros/";
+            $uploadDir = "../imagens_carros/";
             $uploadFile = $uploadDir . basename($imagem["name"]);
 
             // Verificar se o upload foi bem-sucedido
@@ -34,7 +35,7 @@ if (isset($_POST["editar_carro"])) {
             } else {
                 ?>
                 <script>
-                    window.location.href = "atualizar_carro.php";
+                    window.location.href = "lista_carro.php";
                     alert("Erro ao fazer upload da imagem!");
                 </script>
                 <?php
@@ -43,7 +44,7 @@ if (isset($_POST["editar_carro"])) {
             $imagemPath = ""; // Caso nenhum arquivo tenha sido enviado
         }
 
-        $sql = "UPDATE carro SET modelo = '{$modelo}', placa = '{$placa}', preco = '{$preco}', motorizacao = '{$motorizacao}' , ano = '{$ano}', cor = '{$cor}', automatico = '{$automatico}', marca = '{$marca}', imagem = '{$imagemPath}' WHERE idcarro = '$idcarro'";
+        $sql = "UPDATE carro SET quilometragem_inicial  = '{$quilometragem_inicial}', modelo = '{$modelo}', placa = '{$placa}', preco = '{$preco}', motorizacao = '{$motorizacao}' , ano = '{$ano}', cor = '{$cor}', automatico = '{$automatico}', marca = '{$marca}', imagem = '{$imagemPath}' WHERE idcarro = '$idcarro'";
 
         $result = mysqli_query($conn, $sql);
 

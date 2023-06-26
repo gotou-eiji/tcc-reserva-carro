@@ -1,12 +1,4 @@
-<?php
-    session_start();
-?>
 
-<?php
-
-include_once("cabecalho.php");
-
-?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 
@@ -27,8 +19,8 @@ include_once("cabecalho.php");
     </ul>
 
     <div class="col-md-3 text-end">
-      <form action="login/logar_funcionario.html" method="POST">
-        <button type="submit" class="btn btn-outline-primary me-2" name="entrar"> Login</button>
+      <form action="login/logar_funcionario.php" method="POST">
+        <button type="submit" class="btn btn-outline-primary me-2" name="entrar"> Logar</button>
     </div>
   </header>
   </form>

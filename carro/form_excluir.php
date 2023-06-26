@@ -2,23 +2,31 @@
 include_once("../sessao/conexao.php");
 include_once("../sessao/includes.php");
 ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="../funcionario/style2.css"  />
 
-    <body class="bg-light">
-    <div class="modal-content rounded-4 shadow">
-      <div class="modal-header border-bottom-0">
+
     <div class="container">
             <form action="excluir_carro.php" method="POST">
-            <input type="hidden" name="idcarro" class="form-control" value="
-                <?php
-                echo $_GET["idcarro"];
-                ?>">
+
+
                 <div class="form-group">
-                    <label>Deseja realmente excluir?</label>
+                <center>
+                    <label>Deseja realmente excluir este carro?</label>
+</center>
+                    <input type="label" name="modelo" disabled class="form-control" value="Modelo: <?php echo $_GET["modelo"]; ?>">
+                    <input type="label" name="quilometragem_inicial" disabled class="form-control" value="Quilometragem: <?php echo $_GET["quilometragem_inicial"]; ?>">
+                    <input type="label" name="placa" disabled class="form-control" value="Placa: <?php echo $_GET["placa"]; ?>">
+                    <input type="label" name="preco" disabled class="form-control" value="Preço: <?php echo $_GET["preco"]; ?>">
+                    <input type="label" name="motorizacao" disabled class="form-control" value="Motorização: <?php echo $_GET["motorizacao"]; ?>">
+                    <input type="label" name="ano" disabled class="form-control" value="Ano: <?php echo $_GET["ano"]; ?>">
+                    <input type="label" name="cor" disabled class="form-control" value="Cor: <?php echo $_GET["cor"]; ?>">
+                    <input type="label" name="automatico" disabled class="form-control" value="Automático: <?php echo $_GET["automatico"]; ?>">
+                    <img src="<?php echo $_GET["imagem"]; ?>" alt="Imagem do Carro" style="max-width: 665px; max-height: 665px;">
+                    <input type="hidden" name="idcarro" class="form-control" value="<?php echo $_GET["idcarro"]; ?>">
                 </div>
-                <button type="submit" name="excluir_carro" class="btn btn-primary">Sim</button>
+                <button type="submit" name="excluir_carro" class="btn btn-primary">Sim</button> 
                 </form>
                 <form action="lista_carro.php" method="POST">
-                <button type="submit" class="btn btn-second">Não</button>
+                <button type="submit" class="btn btn-second">Não</button> 
 </form>
 </body>

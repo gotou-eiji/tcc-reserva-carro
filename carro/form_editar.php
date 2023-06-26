@@ -2,25 +2,17 @@
 include_once("../sessao/conexao.php");
 include_once("../sessao/includes.php");
 ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="../funcionario/style2.css"  />
 
 <div ng-controller="funcionario">
 
-    <body class="bg-light">
+
         
             <div class="modal-header border-bottom-0">
                 <div class="container">
                 <form action="editar_carro.php" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="idcarro" class="form-control" value="<?php echo $_GET["idcarro"]; ?>">
-<input type="hidden" name="marca" class="form-control" value="<?php echo $_GET["marca"]; ?>">
-<input type="hidden" name="modelo" class="form-control" value="<?php echo $_GET["modelo"]; ?>">
-<input type="hidden" name="placa" class="form-control" value="<?php echo $_GET["placa"]; ?>">
-<input type="hidden" name="preco" class="form-control" value="<?php echo $_GET["preco"]; ?>">
-<input type="hidden" name="motorizacao" class="form-control" value="<?php echo $_GET["motorizacao"]; ?>">
-<input type="hidden" name="ano" class="form-control" value="<?php echo $_GET["ano"]; ?>">
-<input type="hidden" name="cor" class="form-control" value="<?php echo $_GET["cor"]; ?>">
 <input type="hidden" name="automatico" class="form-control" value="<?php echo $_GET["automatico"]; ?>">
-
 
                         <div class="form-group">
                             <label>Marca</label>
@@ -29,6 +21,10 @@ include_once("../sessao/includes.php");
                         <div class="form-group">
                             <label>Modelo</label>
                             <input type="text" name="modelo" class="form-control" value="<?php echo $_GET["modelo"]; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Quilometragem Inicial</label>
+                            <input type="number" name="quilometragem_inicial" class="form-control" value="<?php echo $_GET["quilometragem_inicial"]; ?>">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Placa</label>

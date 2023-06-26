@@ -77,7 +77,7 @@ function checkInputTelefone(){
 
   if(telefoneValue === ""){
     errorInput(telefone, "O Telefone é obrigatório.")
-  }else if(telefoneValue.length = 9){
+  }else if(telefoneValue.length < 9){
     errorInput(telefone, "O Telefone precisa ter 9 digitos.")
   }else{
     const formItem = telefone.parentElement;
@@ -159,6 +159,8 @@ function checkForm(){
 
   if(isValid){
     alert("CADASTRADO COM SUCESSO!")
+    //form.submit(); // Envia o formulário para a página especificada no atributo "action" do elemento <form>
+
   }
 
 }

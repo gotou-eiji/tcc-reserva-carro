@@ -1,7 +1,6 @@
 <?php
 // if (!isset($_SESSION)) {
-//     header('Location: ../login/logar_funcionario.html');
-// }else{
-//     header('Location: ../home/home.php');
+// session_start();
+// $_SESSION['usuario_funcionario_logado'];
 // }
 ?>
